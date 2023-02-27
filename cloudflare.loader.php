@@ -1,8 +1,10 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-
 use CloudFlare\IpRewrite;
+
+if (!class_exists(IpRewrite::class)) {
+    require_once __DIR__.'/vendor/autoload.php';
+}
 
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
