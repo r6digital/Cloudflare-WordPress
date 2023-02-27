@@ -5,7 +5,6 @@ namespace CF\WordPress;
 use CF\Integration\DefaultLogger;
 use CF\Integration\DataStoreInterface;
 use CF\API\Plugin;
-use Symfony\Polyfill\Tests\Intl\Idn;
 
 class DataStore implements DataStoreInterface
 {
@@ -14,6 +13,8 @@ class DataStore implements DataStoreInterface
     const CACHED_DOMAIN_NAME = 'cloudflare_cached_domain_name';
 
     protected $wordPressWrapper;
+
+    public $logger;
 
     /**
      * @param DefaultLogger $logger
@@ -56,7 +57,7 @@ class DataStore implements DataStoreInterface
     }
 
     /**
-     * @return unique id for the current user for use in the host api
+     * @return null unique id for the current user for use in the host api
      */
     public function getHostAPIUserUniqueId()
     {

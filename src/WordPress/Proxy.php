@@ -16,6 +16,7 @@ class Proxy
     protected $wordpressClientAPI;
     protected $wordpressIntegration;
     protected $requestRouter;
+    public $pluginAPI;
 
     /**
      * @param IntegrationInterface $integration
@@ -103,7 +104,7 @@ class Proxy
      * Wrapped in a function so it can be
      * mocked during testing
      *
-     * @return json
+     * @return string
      */
     public function getJSONBody()
     {
