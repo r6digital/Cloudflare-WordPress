@@ -9,7 +9,7 @@
   "name": "cloudflare/wordpress-plugin",
   "type": "wordpress-plugin",
   "require": {
-    "php": "^8.2",
+    "php": "^8.0.2",
     "cloudflare/cf-ip-rewrite": "^1.0.0",
     "symfony/polyfill-intl-idn": "*",
     "psr/log": "^1.0"
@@ -36,7 +36,7 @@
   "version": "4.11.0",
   "config": {
     "platform": {
-      "php": "8.2"
+      "php": "8.0.2"
     }
   }
 }
