@@ -50,7 +50,7 @@ class HTTP2ServerPush
             return $src;
         }
 
-        if (strpos($src, home_url()) !== false) {
+        if (strpos($src, '/') === 0 || strpos($src, home_url()) !== false) {
             $preload_src = apply_filters('http2_link_preload_src', $src);
 
             if (!empty($preload_src)) {
