@@ -46,6 +46,10 @@ class HTTP2ServerPush
 
     public static function http2LinkPreloadHeader($src)
     {
+        if (headers_sent()) {
+            return $src;
+        }
+
         if (strpos($src, home_url()) !== false) {
             $preload_src = apply_filters('http2_link_preload_src', $src);
 
